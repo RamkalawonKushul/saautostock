@@ -14,6 +14,10 @@ gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "sqlite3", "~> 1.5"
+gem "dotenv-rails"
+
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -44,3 +48,5 @@ group :development do
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 
+gem "cloudinary", "~> 2.4"
+gem "activestorage-cloudinary-service"

@@ -16,7 +16,7 @@
         </a>
       </div>
 
-      <!-- Navigation -->
+      <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center gap-8">
         <%= link_to "Home", root_path, class: "nav-link" %>
         <%= link_to "About Us", aboutus_path, class: "nav-link" %>
@@ -25,66 +25,65 @@
         <%= link_to "Contact Us", contactus_path, class: "nav-link" %>
       </nav>
 
-      <!-- Book Appointment Button -->
+      <!-- Book Appointment Button (Desktop only) -->
       <div class="hidden lg:flex items-center">
         <%= link_to "Book Appointment", contactus_path, class: "px-6 py-3 bg-primary text-white font-bold text-base rounded-full hover:bg-primary/90 transition-colors shadow-lg" %>
       </div>
 
       <!-- Mobile Hamburger -->
-      <button class="lg:hidden text-heading-light dark:text-heading-dark">
+      <button id="mobile-menu-toggle" class="lg:hidden text-heading-light dark:text-heading-dark">
         <span class="material-symbols-outlined text-4xl">menu</span>
       </button>
     </div>
   </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-700 shadow-md">
+    <nav class="flex flex-col space-y-4 px-6 py-6 text-center">
+      <%= link_to "Home", root_path, class: "nav-link block" %>
+      <%= link_to "About Us", aboutus_path, class: "nav-link block" %>
+      <%= link_to "Services", services_path, class: "nav-link block" %>
+      <%= link_to "FAQ", faq_path, class: "nav-link block" %>
+      <%= link_to "Contact Us", contactus_path, class: "nav-link block" %>
+      <%= link_to "Book Appointment", contactus_path, class: "w-full bg-primary text-white font-semibold py-3 rounded-full shadow-md hover:bg-primary/90 transition" %>
+    </nav>
+  </div>
 </header>
 
 <style>
-/* Import professional mechanical/tech font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
-/* Logo Text Styling */
 .logo-text {
-  font-family: 'Orbitron', sans-serif; /* Techy / mechanic vibe */
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 0px;
-  line-height: 1;
   color: #1f2937;
   transition: color 0.3s ease;
 }
-
-/* Text subtle glow on hover */
 .logo-text:hover {
   color: #111827;
-  text-shadow: 0 0 2px #146116, 0 0 5px #146116; /* faint mechanic glow */
+  text-shadow: 0 0 2px #146116, 0 0 5px #146116;
 }
-
-/* Spin + glow animation for logo image */
 @keyframes spin-glow {
   0% { transform: rotate(0deg); filter: drop-shadow(0 0 0px #146116); }
   50% { transform: rotate(180deg); filter: drop-shadow(0 0 10px #146116); }
   100% { transform: rotate(360deg); filter: drop-shadow(0 0 0px #146116); }
 }
-
 .spin-glow-animation {
   animation: spin-glow 1s ease-in-out;
   transform-origin: center;
 }
-
-/* Navigation links */
 .nav-link {
   font-weight: 600;
   font-size: 1rem;
-  color: #374151; /* text-gray-700 */
+  color: #374151;
   position: relative;
   transition: color 0.3s ease;
 }
-
 .nav-link:hover,
 .nav-link.active {
-  color: #146116; /* primary green accent */
+  color: #146116;
 }
-
 .nav-link.active::after {
   content: '';
   position: absolute;
@@ -92,33 +91,46 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #146116; /* underline color */
+  background-color: #146116;
   border-radius: 1px;
 }
-
-/* Optional: Mobile hamburger menu styling can go here */
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const logo = document.getElementById("logo");
   const logoLink = document.getElementById("logo-link");
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = mobileMenuToggle.querySelector("span");
 
+  // Logo spin animation
   logo.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent immediate navigation
+    e.preventDefault();
     logo.classList.add("spin-glow-animation");
-
     setTimeout(() => {
       logo.classList.remove("spin-glow-animation");
-      window.location.href = logoLink.href; // Navigate after animation
+      window.location.href = logoLink.href;
     }, 1000);
   });
 
-  // Highlight current page link in navbar
+  // Highlight active link
   const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-link').forEach(link => {
-    if(link.getAttribute('href') === currentPath){
+    if (link.getAttribute('href') === currentPath) {
       link.classList.add('active');
+    }
+  });
+
+  // Mobile menu toggle
+  mobileMenuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    // Change hamburger icon
+    if (mobileMenu.classList.contains("hidden")) {
+      menuIcon.textContent = "menu";
+    } else {
+      menuIcon.textContent = "close";
     }
   });
 });

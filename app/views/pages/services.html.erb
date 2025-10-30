@@ -1,3 +1,7 @@
+<% content_for :title, "Services | SA AUTO STOCK – Trusted Auto Repair in Delta & Surrey" %>
+<% content_for :meta_description, "Explore our wide range of auto repair services in Surrey and Delta, including diagnostics, brake repair, engine maintenance, and more. Book your appointment today!" %>
+<% content_for :meta_keywords, "auto repair services, car diagnostics, brake repair, engine maintenance, Delta auto repair, Surrey mechanic" %>
+<% content_for :og_image, "https://images.pexels.com/photos/3859971/pexels-photo-3859971.jpeg" %>
 
 <section class="py-20 sm:py-24">
 <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -618,15 +622,15 @@
 <script>
 const accordions = document.querySelectorAll('details.accordion');
 
-accordions.forEach((detail) => {
-  detail.addEventListener('toggle', () => {
+document.querySelectorAll('details').forEach((detail) => {
+  detail.addEventListener('toggle', (e) => {
     if (detail.open) {
-      // Close all other details
-      accordions.forEach((otherDetail) => {
-        if (otherDetail !== detail) otherDetail.open = false;
+      document.querySelectorAll('details').forEach((d) => {
+        if (d !== detail) d.open = false;
       });
     }
   });
 });
+
 </script>
 

@@ -1,3 +1,14 @@
+<% content_for :title, "About Us | SA AUTO STOCK – Trusted Auto Repair in Delta & Surrey" %>
+<% content_for :meta_description, "Learn about SA AUTO STOCK, our story, certified technicians, and why customers in Delta and Surrey trust us for auto repair and maintenance." %>
+<% content_for :meta_keywords, "about SA AUTO STOCK, auto repair story, certified mechanics, Delta, Surrey, car maintenance" %>
+<% content_for :og_image, asset_path("asautostock.png") %>
+
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+<!-- GLightbox JS (at the end of body) -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
 <section class="py-16 sm:py-24 bg-background-light dark:bg-background-dark">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
@@ -87,24 +98,85 @@
   </div>
 </div>
 
+<!-- Gallery -->
+<div class="mt-20 max-w-7xl mx-auto text-center px-4">
+  <h2 class="text-3xl font-heading text-gray-900 font-bold">Our Gallery</h2>
+  <p class="mx-auto mt-4 max-w-2xl text-lg text-text-light dark:text-text-dark-muted">
+    A glimpse into our workshop and the quality work we do.
+  </p>
 
-    <!-- Gallery -->
-    <div class="mt-20 max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-heading text-gray-900 font-bold">Our Gallery</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-lg text-text-light dark:text-text-dark-muted">
-        A glimpse into our workshop and the quality work we do.
-      </p>
-      <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <div class="group relative overflow-hidden rounded-lg">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM4I3QlyAg6Z5jMizuognY4YUuR7n2fP77WTDcFBbXlMOVydczVHUCE0UkA_QL4LqGCD_pbKGtpqlS9FHLd9cgabNRJBVIeokxHtB-57IvL0lPGv8J0L6qE4qulr7UeJce5IANOWDri8gwz1ppbtxKmeohsdR2C2II-jy0nwLh3OqoAR7Ri8EEBYlntkpZ19b-41UO8CS1nBT9iV0EDSaEyQcbFt0zJLjUlzTJMTPNMlGG-4uTNJMVAT41YwexIeE96IL9_jR1oY2w" alt="Car repair in progress" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
-          <div class="absolute inset-0 bg-black/40"></div>
-        </div>
-                <div class="group relative overflow-hidden rounded-lg">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM4I3QlyAg6Z5jMizuognY4YUuR7n2fP77WTDcFBbXlMOVydczVHUCE0UkA_QL4LqGCD_pbKGtpqlS9FHLd9cgabNRJBVIeokxHtB-57IvL0lPGv8J0L6qE4qulr7UeJce5IANOWDri8gwz1ppbtxKmeohsdR2C2II-jy0nwLh3OqoAR7Ri8EEBYlntkpZ19b-41UO8CS1nBT9iV0EDSaEyQcbFt0zJLjUlzTJMTPNMlGG-4uTNJMVAT41YwexIeE96IL9_jR1oY2w" alt="Car repair in progress" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
-          <div class="absolute inset-0 bg-black/40"></div>
-        </div>
-        <!-- Add other images similarly -->
-      </div>
-    </div>
+  <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+    <!-- Image 1 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761548592/DJI_0021_pk4qzz.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761548592/DJI_0021_pk4qzz.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+
+    <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+        <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+    <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+    <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+    <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+    <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+    <!-- Image 2 -->
+    <a href="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg" class="glightbox group block relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761552398/DJI_0031_cxdecf.jpg"
+           alt="Car repair in progress"
+           class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+    </a>
+
+
+    <!-- Add more images here -->
   </div>
+</div>
 </section>
+
+<!-- GLightbox JS init -->
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    loop: true,
+    touchNavigation: true,
+    autoplayVideos: false,
+    zoomable: true
+  });
+</script>

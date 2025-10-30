@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def aboutus
+    @gallery_items = GalleryItem.all   # <-- Add this line
   end
 
   def services

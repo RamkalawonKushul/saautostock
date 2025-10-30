@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SA AUTO STOCK</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "Delta Auto Repair | Trusted Mechanics in Surrey & Delta" %>
+    </title>
+    <%= favicon_link_tag "asautostock.png", type: "image/png" %>
+
+    <meta
+      name="description"
+      content="<%= content_for?(:meta_description) ? yield(:meta_description) : 'Delta & Surrey’s trusted auto repair experts offering certified mechanical services, oil changes, diagnostics, and more.' %>"
+    />
+
+    <meta
+      name="keywords"
+      content="<%= content_for?(:meta_keywords) ? yield(:meta_keywords) : 'auto repair, mechanic, Surrey, Delta, BC, oil change, diagnostics' %>"
+    />
+    <meta name="author" content="Delta Auto Repair" />
+    <link rel="canonical" href="https://yourwebsite.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="<%= content_for?(:og_title) ? yield(:og_title) : 'Delta & Surrey’s Trusted Auto Repair Experts' %>" />
+    <meta property="og:description" content="<%= content_for?(:og_description) ? yield(:og_description) : 'Professional automotive repair and maintenance services in Delta & Surrey.' %>" />
+    <meta property="og:image" content="<%= content_for?(:og_image) ? yield(:og_image) : 'https://images.pexels.com/photos/3930091/pexels-photo-3930091.jpeg' %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
     <!-- Tailwind + Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
