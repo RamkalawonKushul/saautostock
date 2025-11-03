@@ -618,19 +618,31 @@
 </div>
 </section>
 
-
 <script>
-const accordions = document.querySelectorAll('details.accordion');
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll("details");
+  const scrollOffset = 100; // adjust this value depending on your header height
 
-document.querySelectorAll('details').forEach((detail) => {
-  detail.addEventListener('toggle', (e) => {
-    if (detail.open) {
-      document.querySelectorAll('details').forEach((d) => {
-        if (d !== detail) d.open = false;
-      });
-    }
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("toggle", function () {
+      if (this.open) {
+        // Close other accordions
+        accordions.forEach((other) => {
+          if (other !== this && other.open) {
+            other.removeAttribute("open");
+          }
+        });
+
+        // Smooth scroll with offset
+        setTimeout(() => {
+          const rect = this.getBoundingClientRect();
+          const offsetTop = window.scrollY + rect.top - scrollOffset;
+          window.scrollTo({ top: offsetTop, behavior: "smooth" });
+        }, 200);
+      }
+    });
   });
 });
-
 </script>
+
 

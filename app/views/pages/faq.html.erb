@@ -210,3 +210,29 @@
 </section>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll("details");
+  const scrollOffset = 120; // adjust if needed for header height
+
+  accordions.forEach((accordion) => {
+    accordion.addEventListener("toggle", function () {
+      if (this.open) {
+        // Close all others
+        accordions.forEach((other) => {
+          if (other !== this && other.open) {
+            other.removeAttribute("open");
+          }
+        });
+
+        // Scroll smoothly with offset (after expand animation)
+        setTimeout(() => {
+          const rect = this.getBoundingClientRect();
+          const offsetTop = window.scrollY + rect.top - scrollOffset;
+          window.scrollTo({ top: offsetTop, behavior: "smooth" });
+        }, 250);
+      }
+    });
+  });
+});
+</script>
