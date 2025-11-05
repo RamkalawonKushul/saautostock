@@ -82,9 +82,24 @@ Welcome to SA AUTO STOCK</h2>
 </div>
 </div>
 </div>
-<div class="order-1 lg:order-2">
-<img alt="Professional auto mechanics working on a car in a well-lit workshop" class="rounded-xl shadow-2xl w-full h-full object-cover" src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761549895/development/_x3u7YYI_ln7m21.jpg"/>
+<style>
+@keyframes zoomInOut {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+.animate-zoom {
+  animation: zoomInOut 8s ease-in-out infinite;
+}
+</style>
+
+<div class="order-1 lg:order-2 overflow-hidden rounded-xl shadow-2xl">
+  <img
+    alt="Professional auto mechanics working on a car in a well-lit workshop"
+    class="w-full h-full object-cover animate-zoom"
+    src="https://res.cloudinary.com/dza1edlqf/image/upload/v1761549895/development/_x3u7YYI_ln7m21.jpg"
+  />
 </div>
+
 </div>
 </div>
 </section>
